@@ -21,6 +21,8 @@
             <Button Content="Keresés" Click="Kereses_Click" />
             <Label Name="Label4" Content="" />
 
+            <Button Content="Mentés fájlba (5. feladat)" Click="MentesFajlba_Click" />
+
         </StackPanel>
     </Grid>
 </Window>

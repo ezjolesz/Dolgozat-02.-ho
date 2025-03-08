@@ -52,5 +52,23 @@ namespace Dolgozat_02._ho
                 Label4.Content = "Érvényes számokat adjon meg!";
             }
         }
+
+        private void MentesFajlba()
+        {
+            var rendszamok = adatok.Select(a => a[0]).Distinct();
+            var idoLista = new List<string>();
+
+            foreach (var rendszam in rendszamok)
+            {
+                var idok = adatok.Where(a => a[0] == rendszam).Select(a => new { Ora = int.Parse(a[1]), Perc = int.Parse(a[2]) });
+                int minOra = idok.Min(x => x.Ora);
+                int minPerc = idok.Where(x => x.Ora == minOra).Min(x => x.Perc);
+                int maxOra = idok.Max(x => x.Ora);
+                int maxPerc = idok.Where(x => x.Ora == maxOra).Max(x => x.Perc);
+                idoLista.Add($"{rendszam} {minOra}:{minPerc} {maxOra}:{maxPerc}");
+            }
+
+            File.WriteAllLines("ido.txt", idoLista);
+        }
     }
 }
