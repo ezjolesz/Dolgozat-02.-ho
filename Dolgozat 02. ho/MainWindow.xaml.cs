@@ -23,6 +23,15 @@ namespace Dolgozat_02._ho
                 var adatokSor = sor.Split('\t');
                 adatok.Add(adatokSor);
             }
+
+              
+
         }
+        private void UtolsoJeladas()
+        {
+            var utolsoJeladas = adatok[^1];
+            Label2.Content = $"Az utolsó jeladás időpontja: {utolsoJeladas[1]}:{utolsoJeladas[2]}, a jármű rendszáma: {utolsoJeladas[0]}";
+        }
+
     }
 }
