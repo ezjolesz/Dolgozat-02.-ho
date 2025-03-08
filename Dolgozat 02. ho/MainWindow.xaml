@@ -8,7 +8,10 @@
 
           
             <Label Content="2. feladat: Utolsó jeladás" FontWeight="Bold"/>
-            <Label Name="Label2" Content="..." />
+            <Label Name="Label2" Content="" />
+
+            <Label Content="3. feladat: Első jármű adatai" FontWeight="Bold"/>
+            <Label Name="Label3" Content="" />
 
         </StackPanel>
     </Grid>

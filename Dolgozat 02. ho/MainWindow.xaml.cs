@@ -33,5 +33,11 @@ namespace Dolgozat_02._ho
             Label2.Content = $"Az utolsó jeladás időpontja: {utolsoJeladas[1]}:{utolsoJeladas[2]}, a jármű rendszáma: {utolsoJeladas[0]}";
         }
 
+        private void ElsoJarmuJelzesei()
+        {
+            var elsoJarmu = adatok[0][0];
+            var idopontok = adatok.Where(a => a[0] == elsoJarmu).Select(a => $"{a[1]}:{a[2]}");
+            Label3.Content = $"Az első jármű: {elsoJarmu}\nJeladásainak időpontjai: {string.Join(" ", idopontok)}";
+        }
     }
 }
