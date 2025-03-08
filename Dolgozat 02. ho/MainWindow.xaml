@@ -13,6 +13,14 @@
             <Label Content="3. feladat: Első jármű adatai" FontWeight="Bold"/>
             <Label Name="Label3" Content="" />
 
+            <Label Content="4. feladat: Keresés időpontra" FontWeight="Bold"/>
+            <Label Content="Kérem, adja meg az órát:" />
+            <TextBox Name="TextBoxOra" Width="100"/>
+            <Label Content="Kérem, adja meg a percet:" />
+            <TextBox Name="TextBoxPerc" Width="100"/>
+            <Button Content="Keresés" Click="Kereses_Click" />
+            <Label Name="Label4" Content="" />
+
         </StackPanel>
     </Grid>
 </Window>
